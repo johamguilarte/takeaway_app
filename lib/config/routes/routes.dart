@@ -9,6 +9,7 @@ class Routes {
   static String home = 'home';
   static String register = 'register';
   static String scan = 'qr_scan';
+  static String confirmation = 'confirmation';
 
   static Map<String, Widget Function(BuildContext)> routes() {
     return {
@@ -17,7 +18,8 @@ class Routes {
       'login': (_) => const LoginPages(),
       'register': (_) => const RegisterPages(),
       'home': (_) => const HomePages(),
-      'qr_scan': (_) => const ScanCameraWidget()
+      'qr_scan': (_) => const ScanCameraWidget(),
+      'confirmation': (_) => const ConfirmationPages(),
     };
   }
 }

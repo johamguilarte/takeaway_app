@@ -1,9 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:takeaway_app/config/providers/providers.dart';
-import 'package:takeaway_app/ui/pages/home/widgets/app_bar_menu.dart';
-import 'package:takeaway_app/ui/pages/home/widgets/credit_card.dart';
 import 'package:takeaway_app/ui/pages/home/widgets/store_img_custom.dart';
 import 'package:takeaway_app/ui/pages/pages.dart';
 
@@ -17,9 +16,12 @@ class HomePages extends StatelessWidget {
       floatingActionButton: const QrCodeButtomMenu(),
       bottomNavigationBar: const AppBarMenu(),
       appBar: AppBar(
-        title: const Text(
-          'Hola Joham Guilarte',
-          style: TextStyle(fontWeight: FontWeight.bold),
+        title: const Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Hola Joham Guilarte',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         toolbarHeight: 40,
         elevation: 0,
@@ -28,24 +30,57 @@ class HomePages extends StatelessWidget {
         ],
         automaticallyImplyLeading: true,
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: SafeArea(
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const SizedBox(height: 5),
-              ClipRRect(
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(8.0),
-                  topRight: Radius.circular(8.0),
-                ),
-                child: Image.asset('assets/images/logo.png',
-                    width: 150, height: 30, fit: BoxFit.fill),
-              ),
               const SizedBox(height: 10),
-              const CreditCard(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 90,
+                  child: Card(
+                    color: Colors.grey.shade200,
+                    elevation: 0,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(50.0),
+                      ),
+                    ),
+                    child: Stack(alignment: Alignment.center, children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Disponible",
+                              style: MyTextSample.subtitle(context)!),
+                          Text("\$ 200.00", style: MyTextSample.title(context)!)
+                        ],
+                      ),
+                    ]),
+                  ),
+                ),
+              ),
+              //const CreditCard(),
               const SizedBox(
-                height: 10,
+                height: 20,
+              ),
+
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                child: Container(
+                  height: 200,
+                  width: MediaQuery.of(context).size.width / 1,
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    color: Colors.grey.shade200,
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                height: 20,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -54,7 +89,7 @@ class HomePages extends StatelessWidget {
                     _TextHeadCustom(
                         alignment: Alignment.topLeft,
                         text: 'Nuestros Aliados',
-                        style: MyTextSample.subtitle(context)!),
+                        style: MyTextSample.subhead(context)!),
                     const Divider(height: 0),
                     const SizedBox(
                       height: 5,
@@ -64,17 +99,21 @@ class HomePages extends StatelessWidget {
                       height: 20,
                     ),
                     const _ItemsCategoryStore(title: 'Ropa'),
+                   
+                    
+                    
                     const SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
-                    const _ItemsCategoryStore(title: 'Construcciòn'),
-                    const SizedBox(
-                      height: 20,
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(8.0),
+                        topRight: Radius.circular(8.0),
+                      ),
+                      child: Image.asset('assets/images/logo.png',
+                          width: 150, height: 30, fit: BoxFit.fill),
                     ),
-                    const _ItemsCategoryStore(title: 'Comida'),
-                    const SizedBox(
-                      height: 5,
-                    ),
+                    const SizedBox(height: 10),
                   ],
                 ),
               ),

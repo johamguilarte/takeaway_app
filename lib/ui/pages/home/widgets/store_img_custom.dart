@@ -1,6 +1,5 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:takeaway_app/config/providers/providers.dart';
 import 'package:takeaway_app/domain/models/dummy/product.dart';

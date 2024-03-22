@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:takeaway_app/config/routes/routes.dart';
 
 class ScanCameraWidget extends StatefulWidget {
   const ScanCameraWidget({Key? key}) : super(key: key);
@@ -30,11 +31,23 @@ class _ScanCameraWidgetState extends State<ScanCameraWidget> {
       ),
       body: SizedBox(
         height: double.infinity,
-        child: MobileScanner(onDetect: (capture) {
+        child: MobileScanner(
+          onDetect: (capture) {
+          
           final List<Barcode> barcodes = capture.barcodes;
+
+          //validators here
+
           for (final barcode in barcodes) {
             print(barcode.rawValue ?? "No Data found in QR");
           }
+
+
+          Future.delayed(const Duration(seconds: 2), () {
+            Navigator.of(context).popAndPushNamed(
+              Routes.confirmation, 
+              arguments: {'barcodes': barcodes},);
+          });
         }),
       ),
     );

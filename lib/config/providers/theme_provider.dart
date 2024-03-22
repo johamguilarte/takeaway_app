@@ -60,7 +60,7 @@ class MyTextSample {
   static TextStyle? title(BuildContext context) {
     return Theme.of(context).textTheme.titleLarge!.copyWith(
           fontWeight: FontWeight.bold,
-          fontSize: 27,
+          fontSize: 28,
           // fontFamily: 'NunitoSans'
         );
   }
@@ -96,7 +96,7 @@ class MyTextSample {
     return Theme.of(context).textTheme.titleSmall!.copyWith(
           color: Colors.black87,
           fontStyle: FontStyle.normal,
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w500,
           fontSize: 17,
           // fontFamily: 'NunitoSans'
         );
