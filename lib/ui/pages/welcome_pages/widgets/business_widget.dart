@@ -12,7 +12,7 @@ class BusinessWidget extends StatelessWidget {
         body: Stack(
       children: [
         CustomBackgroundWidget(
-            assetsImage: 'assets/images/background4.jpg',
+            assetsImage: 'assets/images/background2.jpg',
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: Column(

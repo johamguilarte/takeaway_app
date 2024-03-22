@@ -12,3 +12,6 @@ export 'package:takeaway_app/ui/widgets/background.dart';
 
 // v2
 export 'package:takeaway_app/ui/widgets/custom_background_widget.dart';
+export 'package:takeaway_app/ui/pages/welcome_pages/widgets/benefit_widget.dart';
+export 'package:takeaway_app/ui/pages/welcome_pages/widgets/business_widget.dart';
+export 'package:takeaway_app/ui/pages/welcome_pages/widgets/welcome_widget.dart';

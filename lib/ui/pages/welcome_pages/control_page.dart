@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:takeaway_app/ui/pages/welcome_pages/widgets/benefit_widget.dart';
-import 'package:takeaway_app/ui/pages/welcome_pages/widgets/business_widget.dart';
-import 'package:takeaway_app/ui/pages/welcome_pages/widgets/welcome_widget.dart';
+import 'package:takeaway_app/ui/widgets/widgets.dart';
 
 class ControlPages extends StatelessWidget {
   const ControlPages({super.key});
@@ -18,19 +16,17 @@ class ControlPages extends StatelessWidget {
     ];
 
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Stack(
-        children: [
-          _ContentPages(controller: controller, pages: pages),
-          Center(
-            child: Column(children: [
-              const SizedBox(height: 30),
-              _IndicatorBar(controller: controller, pages: pages),
-            ]),
-          ),
-        ],
-      ),
-    ));
+        body: Stack(
+          children: [
+            _ContentPages(controller: controller, pages: pages),
+            Center(
+              child: Column(children: [
+                const SizedBox(height: 20),
+                SafeArea(child: SizedBox(child: _IndicatorBar(controller: controller, pages: pages))),
+              ]),
+            ),
+          ],
+        ));
   }
 }
 
