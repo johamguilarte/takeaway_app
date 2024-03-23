@@ -19,6 +19,11 @@ class _ScanCameraWidgetState extends State<ScanCameraWidget> {
 
   @override
   Widget build(BuildContext context) {
+    MobileScannerController controller = MobileScannerController(
+      torchEnabled: false,
+      // facing: CameraFacing.front,
+    );
+    bool isStarted = true;
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -32,23 +37,28 @@ class _ScanCameraWidgetState extends State<ScanCameraWidget> {
       body: SizedBox(
         height: double.infinity,
         child: MobileScanner(
-          onDetect: (capture) {
-          
-          final List<Barcode> barcodes = capture.barcodes;
+            controller: controller,
+            onDetect: (capture) {
+              final List<Barcode> barcodes = capture.barcodes;
 
-          //validators here
+              for (final barcode in barcodes) {
+                if (isStarted == true) {
+                  isStarted = false;
+                  Navigator.of(context).popAndPushNamed(
+                    Routes.confirmation,
+                    arguments: {'barcodes': barcodes},
+                  );
+                }
+                /*else {}
+                print(barcode.rawValue ?? "No Data found in QR");*/
+              }
 
-          for (final barcode in barcodes) {
-            print(barcode.rawValue ?? "No Data found in QR");
-          }
-
-
-          Future.delayed(const Duration(seconds: 2), () {
-            Navigator.of(context).popAndPushNamed(
-              Routes.confirmation, 
-              arguments: {'barcodes': barcodes},);
-          });
-        }),
+              // Future.delayed(const Duration(seconds: 2), () {
+              //   Navigator.of(context).pushNamed(
+              //     Routes.confirmation,
+              //     arguments: {'barcodes': barcodes},);
+              // });
+            }),
       ),
     );
   }
