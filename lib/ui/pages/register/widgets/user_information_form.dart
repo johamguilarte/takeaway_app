@@ -5,7 +5,9 @@ import 'package:takeaway_app/config/providers/providers.dart';
 import 'package:takeaway_app/ui/widgets/widgets.dart';
 
 class UserInformationForm extends StatelessWidget {
-  const UserInformationForm({Key? key}) : super(key: key);
+  final PageController controller;
+  const UserInformationForm({Key? key, required this.controller})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

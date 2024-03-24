@@ -33,7 +33,7 @@ class CustomButtonWidget extends StatelessWidget {
               ),
             ),
             child: const Text(
-              'Iniciar Sesión',
+              'Ingresar',
               style: TextStyle(fontSize: 21),
             ),
           ),
@@ -44,7 +44,7 @@ class CustomButtonWidget extends StatelessWidget {
           height: 60,
           child: OutlinedButton(
             onPressed: () {
-              print('register');
+              Navigator.of(context).pushReplacementNamed(Routes.register);
             },
             style: OutlinedButton.styleFrom(
               foregroundColor: colorSecondButton ?? Colors.white,

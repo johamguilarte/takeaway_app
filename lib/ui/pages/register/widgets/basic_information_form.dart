@@ -4,7 +4,9 @@ import 'package:takeaway_app/config/providers/providers.dart';
 import 'package:takeaway_app/ui/widgets/widgets.dart';
 
 class BasicInformationForm extends StatelessWidget {
-  const BasicInformationForm({Key? key}) : super(key: key);
+  final PageController controller;
+  const BasicInformationForm({Key? key, required this.controller})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +50,9 @@ class BasicInformationForm extends StatelessWidget {
                       margin: const EdgeInsets.symmetric(horizontal: 15),
                       text: "Siguiente",
                       onPressed: () async {
-                        print('here bro');
+                        controller.nextPage(
+                            duration: const Duration(milliseconds: 1000),
+                            curve: Curves.easeInCubic);
                       })
                 ],
               )),

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:takeaway_app/config/providers/providers.dart';
 import 'package:takeaway_app/config/routes/routes.dart';

@@ -4,7 +4,6 @@ import 'package:provider/single_child_widget.dart';
 import 'package:takeaway_app/config/providers/providers.dart';
 import 'package:takeaway_app/config/routes/routes.dart';
 import 'package:takeaway_app/config/shared_preference/preferences.dart';
-import 'package:takeaway_app/ui/pages/login/login_pages.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,10 +18,10 @@ List<SingleChildWidget> get _providers {
   return [
     ChangeNotifierProvider(
         create: (_) => ThemeProvider(isDarkMode: Preferences.darkMode)),
-    ChangeNotifierProvider(
+    /*ChangeNotifierProvider(
       create: (_) => LoginFormProvider(),
       child: const LoginPages(),
-    ),
+    ),*/
     ChangeNotifierProvider(create: (_) => RegisterFormProvider()),
   ];
 }

@@ -20,38 +20,52 @@ class _RegisterPagesState extends State<RegisterPages> {
   Widget build(BuildContext context) {
     final provider = Provider.of<RegisterFormProvider>(context);
     List<Widget> pages = [
-      const _ContainerWidgets(child: BasicInformationForm()),
+      _ContainerWidgets(
+          child: BasicInformationForm(
+        controller: controller,
+      )),
       _ContainerWidgets(
           child: PinPutForm(
         formKey: provider.pinPutForm,
         onChanged: null,
-        onCompleted: (p0) => print('complete $p0'),
+        onCompleted: (p0) => {
+          controller.nextPage(
+              duration: const Duration(milliseconds: 1000),
+              curve: Curves.easeInCubic)
+        },
       )),
-      const _ContainerWidgets(child: DniInformationForm()),
-      const _ContainerWidgets(child: UserInformationForm()),
+      _ContainerWidgets(
+          child: DniInformationForm(
+        controller: controller,
+      )),
+      _ContainerWidgets(
+          child: UserInformationForm(
+        controller: controller,
+      )),
     ];
 
     return Scaffold(
-        body: BackgroundWidgets(
+        body: CustomBackgroundWidget(
+            assetsImage: 'assets/images/background2.jpg',
             child: SingleChildScrollView(
-      child: Column(children: [
-        const SizedBox(height: 170),
-        CardContainerWidgets(
-          child: SizedBox(
-            child: Column(
-              children: [
-                //INDICATOR STEP BY STEP
-                _IndicatorWidgets(controller: controller, pages: pages),
+              child: Column(children: [
+                const SizedBox(height: 170),
+                CardContainerWidgets(
+                  child: SizedBox(
+                    child: Column(
+                      children: [
+                        //INDICATOR STEP BY STEP
+                        _IndicatorWidgets(controller: controller, pages: pages),
 
-                const SizedBox(height: 30),
-                //PAGE OF INDICATOR
-                _ContentPages(controller: controller, pages: pages),
-              ],
-            ),
-          ),
-        )
-      ]),
-    )));
+                        const SizedBox(height: 30),
+                        //PAGE OF INDICATOR
+                        _ContentPages(controller: controller, pages: pages),
+                      ],
+                    ),
+                  ),
+                )
+              ]),
+            )));
   }
 }
 
@@ -90,6 +104,7 @@ class _ContentPages extends StatelessWidget {
       color: Colors.transparent.withOpacity(0.0),
       height: mediaQuery.height * 0.60,
       child: PageView.builder(
+        physics: const NeverScrollableScrollPhysics(),
         controller: controller,
         itemCount: pages.length,
         itemBuilder: (_, index) {

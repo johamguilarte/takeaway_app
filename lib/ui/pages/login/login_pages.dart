@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:takeaway_app/config/providers/providers.dart';
 import 'package:takeaway_app/service/service.dart';
-import 'package:takeaway_app/ui/widgets/widgets.dart';
-
+import 'package:takeaway_app/ui/widgets/widgets.dart';*/
+/*
 class LoginPages extends StatelessWidget {
   const LoginPages({super.key});
 
@@ -117,3 +117,4 @@ class _LoginForm extends StatelessWidget {
         prefixIcon: icon != null ? Icon(icon) : null);
   }
 }
+*/

@@ -15,7 +15,7 @@ class Routes {
     return {
       'splash': (_) => const SplashPages(),
       'welcome': (_) => const ControlPages(),
-      'login': (_) => const LoginPages(),
+      //'login': (_) => const LoginPages(),
       'register': (_) => const RegisterPages(),
       'home': (_) => const HomePages(),
       'qr_scan': (_) => const ScanCameraWidget(),

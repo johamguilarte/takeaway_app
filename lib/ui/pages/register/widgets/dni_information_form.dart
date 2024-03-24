@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:takeaway_app/config/providers/providers.dart';
+import 'package:takeaway_app/config/routes/routes.dart';
 import 'package:takeaway_app/ui/widgets/widgets.dart';
 
 class DniInformationForm extends StatelessWidget {
-  const DniInformationForm({Key? key}) : super(key: key);
+  final PageController controller;
+  const DniInformationForm({Key? key, required this.controller})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +43,7 @@ class DniInformationForm extends StatelessWidget {
                       margin: const EdgeInsets.symmetric(horizontal: 15),
                       text: "Siguiente",
                       onPressed: () async {
-                        print('here bro');
+                        Navigator.of(context).pushReplacementNamed(Routes.home);
                       })
                 ],
               )),
