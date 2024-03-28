@@ -45,7 +45,7 @@ class _ScanCameraWidgetState extends State<ScanCameraWidget> {
                 if (isStarted == true) {
                   isStarted = false;
                   Navigator.of(context).pushReplacementNamed(
-                    Routes.confirmation,
+                    Routes.methodPayment,
                     arguments: {'barcodes': barcodes},
                   );
                 }

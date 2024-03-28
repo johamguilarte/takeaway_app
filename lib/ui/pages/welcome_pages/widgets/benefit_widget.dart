@@ -20,15 +20,15 @@ class BenefitWidget extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      const SizedBox(height: 100),
+                      const SizedBox(height: 150),
                       AnimatedTextKit(
                         animatedTexts: [
                           TypewriterAnimatedText(
                             "Fugiat qui ipsum sunt tempor",
                             textStyle: const TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 32.0,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                             speed: const Duration(milliseconds: 150),
                           ),
@@ -43,19 +43,16 @@ class BenefitWidget extends StatelessWidget {
                       const Text(
                         'Aliquip laborum amet anim magna enim mollit adipisicing pariatur.',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 23.0,
-                          fontWeight: FontWeight.w300,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                       // espace blank
                       const SizedBox(height: 75),
                     ],
                   ),
-                  const CustomButtonWidget(
-                    colorFirstButton: Colors.white,
-                    colorSecondButton: Colors.white,
-                  )
+                  const CustomButtonWidget()
                 ],
               ),
             )),

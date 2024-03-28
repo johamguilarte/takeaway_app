@@ -27,14 +27,14 @@ class CustomButtonWidget extends StatelessWidget {
             },
             style: OutlinedButton.styleFrom(
               backgroundColor: Colors.pinkAccent,
-              foregroundColor: colorFirstButton ?? Colors.black,
+              foregroundColor: colorFirstButton ?? Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
             ),
             child: const Text(
               'Ingresar',
-              style: TextStyle(fontSize: 21),
+              style: TextStyle(fontSize: 17),
             ),
           ),
         ),
@@ -47,7 +47,7 @@ class CustomButtonWidget extends StatelessWidget {
               Navigator.of(context).pushReplacementNamed(Routes.register);
             },
             style: OutlinedButton.styleFrom(
-              foregroundColor: colorSecondButton ?? Colors.white,
+              foregroundColor: colorSecondButton ?? Colors.black,
               side: const BorderSide(width: 2, color: Colors.pinkAccent),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
@@ -55,7 +55,7 @@ class CustomButtonWidget extends StatelessWidget {
             ),
             child: const Text(
               'Registrarme',
-              style: TextStyle(fontSize: 22),
+              style: TextStyle(fontSize: 17),
             ),
           ),
         ),

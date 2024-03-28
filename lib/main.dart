@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
         routes: Routes.routes(),
         theme: Provider.of<ThemeProvider>(context).currentTheme.copyWith(
             textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Poppins'),
+            iconTheme: IconThemeData(color: MyTextSample.iconColors, size: 30),
             // scaffoldBackgroundColor: Colors.,
             inputDecorationTheme: InputDecorationTheme(
               enabledBorder: const OutlineInputBorder(

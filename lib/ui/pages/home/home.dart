@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:takeaway_app/config/providers/providers.dart';
 import 'package:takeaway_app/ui/pages/home/widgets/store_img_custom.dart';
@@ -26,7 +24,12 @@ class HomePages extends StatelessWidget {
         toolbarHeight: 40,
         elevation: 0,
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(FontAwesomeIcons.bell))
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                FontAwesomeIcons.bell,
+                color: Colors.black,
+              ))
         ],
         automaticallyImplyLeading: true,
       ),
@@ -41,7 +44,7 @@ class HomePages extends StatelessWidget {
                   width: double.infinity,
                   height: 90,
                   child: Card(
-                    color: Colors.grey.shade200,
+                    color: MyTextSample.backgroundColors,
                     elevation: 0,
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(
@@ -74,7 +77,7 @@ class HomePages extends StatelessWidget {
                   width: MediaQuery.of(context).size.width / 1,
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(20)),
-                    color: Colors.grey.shade200,
+                    color: MyTextSample.backgroundColors,
                   ),
                 ),
               ),
@@ -99,9 +102,6 @@ class HomePages extends StatelessWidget {
                       height: 20,
                     ),
                     const _ItemsCategoryStore(title: 'Ropa'),
-                   
-                    
-                    
                     const SizedBox(
                       height: 30,
                     ),

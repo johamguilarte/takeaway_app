@@ -33,6 +33,9 @@ RadialGradient styleGoogleIcon() {
 }
 
 class MyTextSample {
+  static Color backgroundColors = const Color(0xFFDEDEDE);
+  static Color iconColors = Colors.black;
+
   static TextStyle? display4(BuildContext context) {
     return Theme.of(context).textTheme.displayLarge;
   }
@@ -100,6 +103,11 @@ class MyTextSample {
           fontSize: 17,
           // fontFamily: 'NunitoSans'
         );
+  }
+
+  static TextStyle? subtitle2(BuildContext context) {
+    return Theme.of(context).textTheme.titleSmall!.copyWith(
+        color: Colors.black, fontStyle: FontStyle.italic, fontSize: 16);
   }
 
   static TextStyle? overline(BuildContext context) {

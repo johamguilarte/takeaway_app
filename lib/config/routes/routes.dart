@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:takeaway_app/ui/pages/method_of_payment/method_payment.dart';
 import 'package:takeaway_app/ui/pages/pages.dart';
 import 'package:takeaway_app/ui/widgets/widgets.dart';
 
@@ -10,6 +11,7 @@ class Routes {
   static String register = 'register';
   static String scan = 'qr_scan';
   static String confirmation = 'confirmation';
+  static String methodPayment = 'methodpayment';
 
   static Map<String, Widget Function(BuildContext)> routes() {
     return {
@@ -20,6 +22,7 @@ class Routes {
       'home': (_) => const HomePages(),
       'qr_scan': (_) => const ScanCameraWidget(),
       'confirmation': (_) => const ConfirmationPages(),
+      'methodpayment': (_) => const MethodPayment(),
     };
   }
 }

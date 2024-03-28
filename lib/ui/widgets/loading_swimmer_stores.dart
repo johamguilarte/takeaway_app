@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 const _shimmerGradient = LinearGradient(
   colors: [
-    Color(0xFFEBEBF4),
-    Color(0xFFF4F4F4),
-    Color(0xFFEBEBF4),
+    Color(0xFFDEDEDE),
+    Color(0xFFDEDEDE),
+    Color(0xFFDEDEDE),
   ],
   stops: [
     0.1,

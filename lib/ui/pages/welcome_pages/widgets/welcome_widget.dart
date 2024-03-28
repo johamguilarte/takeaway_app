@@ -22,11 +22,11 @@ class WelcomeWidget extends StatelessWidget {
                   AnimatedTextKit(
                     animatedTexts: [
                       TypewriterAnimatedText(
-                        "Fugiat qui ipsum sunt tempor",
+                        "Llévatelo app",
                         textStyle: const TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 32.0,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                         ),
                         speed: const Duration(milliseconds: 150),
                       ),
@@ -40,11 +40,11 @@ class WelcomeWidget extends StatelessWidget {
                   const SizedBox(height: 5),
                   // subtitle
                   const Text(
-                    'Aliquip laborum amet anim magna enim mollit adipisicing pariatur.',
+                    'La compra es tuya, el momento es ahora, Llévatelo.',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 23.0,
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                   // espace blank
