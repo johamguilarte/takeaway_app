@@ -10,9 +10,9 @@ class HomePages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: const QrCodeButtomMenu(),
-      bottomNavigationBar: const AppBarMenu(),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // floatingActionButton: const QrCodeButtomMenu(),
+      // bottomNavigationBar: const AppBarMenu(),
       appBar: AppBar(
         title: const Align(
           alignment: Alignment.centerLeft,
