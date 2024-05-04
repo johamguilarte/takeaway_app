@@ -65,6 +65,34 @@ class _QrCodeButtomMenuState extends State<QrCodeButtomMenu> {
               ),
             ),
           ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Align(
+              alignment: Alignment.center,
+              child: Text(
+                "Dolor nisi anim duis laborum ipsum. Eu laborum nulla adipisicing ad irure irure adipisicing tempor cillum cupidatat consectetur ad occaecat aute.",
+                textAlign: TextAlign.center,
+              )),
+          const SizedBox(
+            height: 20,
+          ),
+          const Divider(),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Column(children: [
+                ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(8.0),
+                    topRight: Radius.circular(8.0),
+                  ),
+                  child: Image.asset('assets/images/logo.png',
+                      width: 150, height: 30, fit: BoxFit.fill),
+                ),
+              ]))
         ]))));
 
     /*FloatingActionButton(

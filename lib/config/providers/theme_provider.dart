@@ -110,6 +110,14 @@ class MyTextSample {
         color: Colors.black, fontStyle: FontStyle.italic, fontSize: 16);
   }
 
+  static TextStyle? subtitleBold(BuildContext context) {
+    return Theme.of(context).textTheme.titleSmall!.copyWith(
+        color: Colors.black,
+        fontWeight: FontWeight.bold,
+        fontStyle: FontStyle.normal,
+        fontSize: 18);
+  }
+
   static TextStyle? overline(BuildContext context) {
     return Theme.of(context).textTheme.labelSmall;
   }
